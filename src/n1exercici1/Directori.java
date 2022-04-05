@@ -1,4 +1,4 @@
-package n1exercici5;
+package n1exercici1;
 import java.io.File;
 import java.util.*;
 
