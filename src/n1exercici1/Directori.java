@@ -22,15 +22,7 @@ public class Directori {
     pathnames = f.list();
     // For each pathname in the pathnames array
     for (String pathname : pathnames) {
-    	String caracter = ".";
-        // Print the names of files and directories
-        //System.out.println(pathname);
-        if (f.isDirectory()) {
-        	System.out.println(f.listFiles().toString());
-        	System.out.println(pathname+" Es un archivo");
-        	
-        }
-        else {System.out.println(pathname+" Es una carpeta");}
-    }
+        	System.out.println(pathname);
+       
 }
-}
+}}
