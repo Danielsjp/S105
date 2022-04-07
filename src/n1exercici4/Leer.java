@@ -4,9 +4,11 @@ import java.io.*;
 
 public class Leer {
 
- public static void main(String[] args) throws Exception
- {
+	public void archivoPath () throws Exception {
+		FileReader fr = new FileReader("C:\\Users\\sjpda\\Documents\\example.txt");
+		int i;
+		while ((i = fr.read()) != -1)
 
-   Principal hola = new Principal();
- }
+		System.out.println((char) i);
+	}
 }
