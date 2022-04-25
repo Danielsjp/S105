@@ -11,8 +11,8 @@ public class Principal {
  // no he podido hacer la llamada a la clase leer desde aqui, he puesto el codigo en el main.
 // no he sabido devolver por el return toda la linea de texto. me devolvia caracter por caracter. asi funciona.
 	public static void main(String[] args) throws Exception {
-
-		FileReader fr = new FileReader("C:\\Users\\sjpda\\Documents\\example.txt");
+		String ruta = args[0];
+		FileReader fr = new FileReader(ruta);
 		int i;
 		while ((i = fr.read()) != -1)
 			//System.out.print(i);

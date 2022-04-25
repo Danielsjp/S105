@@ -1,5 +1,4 @@
 package n1exercici5;
-
 import java.io.*;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -11,14 +10,16 @@ class Principal
 {
     public static void main(String[] args)
     {   
-        Demo object = new Demo(1, "geeksforgeeks");
-        String filename = "C:\\Users\\sjpda\\Documents\\file.ser";
+    	String objeto1 = args[0];
+    	String fichero = args[1];
+        Demo object = new Demo(1, objeto1);
+        //String filename = "C:\\Users\\sjpda\\Documents\\file.ser";
           
         // Serialization 
         try
         {   
             //Saving of object in a file
-            FileOutputStream file = new FileOutputStream(filename);
+            FileOutputStream file = new FileOutputStream(fichero);
             ObjectOutputStream out = new ObjectOutputStream(file);
               
             // Method for serialization of object
@@ -43,7 +44,7 @@ class Principal
         try
         {   
             // Reading the object from a file
-            FileInputStream file = new FileInputStream(filename);
+            FileInputStream file = new FileInputStream(fichero);
             ObjectInputStream in = new ObjectInputStream(file);
               
             // Method for deserialization of object
@@ -66,4 +67,18 @@ class Principal
         }
   
     }
+}
+
+class Demo implements java.io.Serializable
+{
+ protected int a;
+ protected String b;
+
+ // Default constructor
+ public Demo(int a, String b)
+ {
+     this.a = a;
+     this.b = b;
+ }
+
 }
